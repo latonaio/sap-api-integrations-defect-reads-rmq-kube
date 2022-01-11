@@ -1,0 +1,1305 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Defect",
+    "version": "1 ",
+    "description": "\r\n\r\nA defect is any property or attribute of a material that does not meet the specifications of an inspection characteristic. A defect can be encountered during a quality inspection.\r\n\r\nThis service enables you to record or process a defect that is not assigned to a quality notification, for example, a generic defect. You record defects using predefined defect codes.\r\n"
+  },
+  "externalDocs": {
+    "description": "Business Documentation",
+    "url": "https://help.sap.com/http.svc/ahp2/SAP_S4HANA_ON-PREMISE/2021.000/EN/1f/88e2e4ccfd4f50a6646284a6f51bc6/frameset.htm"
+  },
+  "x-sap-api-type": "ODATA",
+  "x-sap-shortText": "\r\nCreate, read, update, and delete defects that are not assigned to a quality notification using this synchronous inbound service",
+  "x-sap-api-deprecated": "No",
+  "x-sap-software-min-version": "2021",
+  "x-sap-ext-overview": [
+    {
+      "name": "Authentication Methods",
+      "values": [
+        {
+          "text": "Basic, x509",
+          "format": "plain"
+        }
+      ]
+    },
+    {
+      "name": "Business Object",
+      "values": [
+        {
+          "text": "Defect",
+          "format": "plain"
+        }
+      ]
+    }
+  ],
+  "x-sap-stateInfo": {
+    "state": "active"
+  },
+  "security": [
+    {
+      "basicAuthentication": []
+    }
+  ],
+  "servers": [
+    {
+      "url": "https://{host}:{port}/sap/opu/odata/sap/API_DEFECT_SRV",
+      "variables": {
+        "host": {
+          "default": ""
+        },
+        "port": {
+          "default": ""
+        }
+      }
+    }
+  ],
+  "tags": [
+    {
+      "name": "Defects"
+    }
+  ],
+  "paths": {
+    "/A_Defect": {
+      "get": {
+        "summary": "Reads all defects.",
+        "description": "Reads all defects or several defects according to different selection criteria, for example,  defect category. You can retrieve administrative data, reference information, or basic data such as catalog data for the defects.",
+        "tags": [
+          "Defects"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/top"
+          },
+          {
+            "$ref": "#/components/parameters/skip"
+          },
+          {
+            "name": "$filter",
+            "in": "query",
+            "description": "Filter items by property values, see [Filtering](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=64)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/count"
+          },
+          {
+            "name": "$orderby",
+            "in": "query",
+            "description": "Order items by property values, see [Sorting](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=65)",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "DefectInternalID",
+                  "DefectInternalID desc",
+                  "Defect",
+                  "Defect desc",
+                  "DefectCategory",
+                  "DefectCategory desc",
+                  "CreatedByUser",
+                  "CreatedByUser desc",
+                  "CreationDate",
+                  "CreationDate desc",
+                  "LastChangedByUser",
+                  "LastChangedByUser desc",
+                  "LastChangeDate",
+                  "LastChangeDate desc",
+                  "DefectText",
+                  "DefectText desc",
+                  "DefectCodeCatalog",
+                  "DefectCodeCatalog desc",
+                  "DefectCodeGroup",
+                  "DefectCodeGroup desc",
+                  "DefectCode",
+                  "DefectCode desc",
+                  "DefectCodeVersion",
+                  "DefectCodeVersion desc",
+                  "DefectObjectCodeCatalog",
+                  "DefectObjectCodeCatalog desc",
+                  "DefectObjectCodeGroup",
+                  "DefectObjectCodeGroup desc",
+                  "DefectObjectCode",
+                  "DefectObjectCode desc",
+                  "DefectiveQuantity",
+                  "DefectiveQuantity desc",
+                  "DefectiveQuantityUnit",
+                  "DefectiveQuantityUnit desc",
+                  "ManufacturingOrder",
+                  "ManufacturingOrder desc",
+                  "OrderInternalID",
+                  "OrderInternalID desc",
+                  "ManufacturingOrderOperation",
+                  "ManufacturingOrderOperation desc",
+                  "ManufacturingOrderSequence",
+                  "ManufacturingOrderSequence desc",
+                  "CreationTime",
+                  "CreationTime desc",
+                  "LastChangeTime",
+                  "LastChangeTime desc",
+                  "DefectClass",
+                  "DefectClass desc",
+                  "NumberOfDefects",
+                  "NumberOfDefects desc",
+                  "InspPlanOperationInternalID",
+                  "InspPlanOperationInternalID desc",
+                  "InspectionCharacteristic",
+                  "InspectionCharacteristic desc",
+                  "InspectionSubsetInternalID",
+                  "InspectionSubsetInternalID desc",
+                  "MaterialSample",
+                  "MaterialSample desc",
+                  "WorkCenterTypeCode",
+                  "WorkCenterTypeCode desc",
+                  "MainWorkCenterInternalID",
+                  "MainWorkCenterInternalID desc",
+                  "MainWorkCenterPlant",
+                  "MainWorkCenterPlant desc",
+                  "MainWorkCenter",
+                  "MainWorkCenter desc",
+                  "Equipment",
+                  "Equipment desc",
+                  "FunctionalLocation",
+                  "FunctionalLocation desc",
+                  "IsDeleted",
+                  "IsDeleted desc",
+                  "DefectOrigin",
+                  "DefectOrigin desc",
+                  "Material",
+                  "Material desc",
+                  "Plant",
+                  "Plant desc",
+                  "InspectionLot",
+                  "InspectionLot desc",
+                  "CatalogProfile",
+                  "CatalogProfile desc",
+                  "ChangedDateTime",
+                  "ChangedDateTime desc"
+                ]
+              }
+            }
+          },
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "DefectInternalID",
+                  "Defect",
+                  "DefectCategory",
+                  "CreatedByUser",
+                  "CreationDate",
+                  "LastChangedByUser",
+                  "LastChangeDate",
+                  "DefectText",
+                  "DefectCodeCatalog",
+                  "DefectCodeGroup",
+                  "DefectCode",
+                  "DefectCodeVersion",
+                  "DefectObjectCodeCatalog",
+                  "DefectObjectCodeGroup",
+                  "DefectObjectCode",
+                  "DefectiveQuantity",
+                  "DefectiveQuantityUnit",
+                  "ManufacturingOrder",
+                  "OrderInternalID",
+                  "ManufacturingOrderOperation",
+                  "ManufacturingOrderSequence",
+                  "CreationTime",
+                  "LastChangeTime",
+                  "DefectClass",
+                  "NumberOfDefects",
+                  "InspPlanOperationInternalID",
+                  "InspectionCharacteristic",
+                  "InspectionSubsetInternalID",
+                  "MaterialSample",
+                  "WorkCenterTypeCode",
+                  "MainWorkCenterInternalID",
+                  "MainWorkCenterPlant",
+                  "MainWorkCenter",
+                  "Equipment",
+                  "FunctionalLocation",
+                  "IsDeleted",
+                  "DefectOrigin",
+                  "Material",
+                  "Plant",
+                  "InspectionLot",
+                  "CatalogProfile",
+                  "ChangedDateTime"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Retrieved entities",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "Wrapper",
+                  "type": "object",
+                  "properties": {
+                    "d": {
+                      "title": "Collection of A_DefectType",
+                      "type": "object",
+                      "properties": {
+                        "__count": {
+                          "$ref": "#/components/schemas/count"
+                        },
+                        "results": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/API_DEFECT_SRV.A_DefectType"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "4XX": {
+            "$ref": "#/components/responses/error"
+          }
+        }
+      },
+      "post": {
+        "summary": "Creates a new defect.",
+        "description": "Creates a new defect, for which you need to provide a defect text and a defect category. For defect categories other than 06 (generic defect), you need to provide further properties.",
+        "tags": [
+          "Defects"
+        ],
+        "requestBody": {
+          "required": true,
+          "description": "New entity",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/API_DEFECT_SRV.A_DefectType-create"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "A_DefectType",
+                  "type": "object",
+                  "properties": {
+                    "d": {
+                      "$ref": "#/components/schemas/API_DEFECT_SRV.A_DefectType"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "4XX": {
+            "$ref": "#/components/responses/error"
+          }
+        }
+      }
+    },
+    "/A_Defect('{DefectInternalID}')": {
+      "parameters": [
+        {
+          "name": "DefectInternalID",
+          "in": "path",
+          "required": true,
+          "description": "Notification Number",
+          "schema": {
+            "type": "string",
+            "maxLength": 12
+          }
+        }
+      ],
+      "get": {
+        "summary": "Reads a specific defect by its internal ID.",
+        "description": "Reads a specific defect with administrative data, reference information, and basic data such as catalog data. You need to provide the internal ID of the defect, which is the defect number with the prefix $.",
+        "tags": [
+          "Defects"
+        ],
+        "parameters": [
+          {
+            "name": "$select",
+            "in": "query",
+            "description": "Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "DefectInternalID",
+                  "Defect",
+                  "DefectCategory",
+                  "CreatedByUser",
+                  "CreationDate",
+                  "LastChangedByUser",
+                  "LastChangeDate",
+                  "DefectText",
+                  "DefectCodeCatalog",
+                  "DefectCodeGroup",
+                  "DefectCode",
+                  "DefectCodeVersion",
+                  "DefectObjectCodeCatalog",
+                  "DefectObjectCodeGroup",
+                  "DefectObjectCode",
+                  "DefectiveQuantity",
+                  "DefectiveQuantityUnit",
+                  "ManufacturingOrder",
+                  "OrderInternalID",
+                  "ManufacturingOrderOperation",
+                  "ManufacturingOrderSequence",
+                  "CreationTime",
+                  "LastChangeTime",
+                  "DefectClass",
+                  "NumberOfDefects",
+                  "InspPlanOperationInternalID",
+                  "InspectionCharacteristic",
+                  "InspectionSubsetInternalID",
+                  "MaterialSample",
+                  "WorkCenterTypeCode",
+                  "MainWorkCenterInternalID",
+                  "MainWorkCenterPlant",
+                  "MainWorkCenter",
+                  "Equipment",
+                  "FunctionalLocation",
+                  "IsDeleted",
+                  "DefectOrigin",
+                  "Material",
+                  "Plant",
+                  "InspectionLot",
+                  "CatalogProfile",
+                  "ChangedDateTime"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Retrieved entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "A_DefectType",
+                  "type": "object",
+                  "properties": {
+                    "d": {
+                      "$ref": "#/components/schemas/API_DEFECT_SRV.A_DefectType"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "4XX": {
+            "$ref": "#/components/responses/error"
+          }
+        }
+      },
+      "patch": {
+        "summary": "Updates a specific defect.",
+        "description": "Updates one or more properties of a specific defect. You need to provide the internal ID of the defect, which is the defect number with the prefix $.",
+        "tags": [
+          "Defects"
+        ],
+        "requestBody": {
+          "required": true,
+          "description": "New property values",
+          "content": {
+            "application/json": {
+              "schema": {
+                "title": "Modified A_DefectType",
+                "type": "object",
+                "properties": {
+                  "d": {
+                    "$ref": "#/components/schemas/API_DEFECT_SRV.A_DefectType-update"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {
+            "description": "Success"
+          },
+          "4XX": {
+            "$ref": "#/components/responses/error"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deletes a specific defect.",
+        "description": "Deletes the defect with a specific internal ID, which is the defect number with the prefix $.",
+        "tags": [
+          "Defects"
+        ],
+        "responses": {
+          "204": {
+            "description": "Success"
+          },
+          "4XX": {
+            "$ref": "#/components/responses/error"
+          }
+        }
+      }
+    },
+    "/$batch": {
+      "post": {
+        "summary": "Send a group of requests",
+        "description": "Group multiple requests into a single request payload, see [Batch Requests](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=152).\n\n*Please note that \"Try it out\" is not supported for this request.*",
+        "tags": [
+          "Batch Requests"
+        ],
+        "requestBody": {
+          "required": true,
+          "description": "Batch request",
+          "content": {
+            "multipart/mixed;boundary=request-separator": {
+              "schema": {
+                "type": "string"
+              },
+              "example": "--request-separator\nContent-Type: application/http\nContent-Transfer-Encoding: binary\n\nGET A_Defect HTTP/1.1\nAccept: application/json\n\n\n--request-separator--"
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Batch response",
+            "content": {
+              "multipart/mixed": {
+                "schema": {
+                  "type": "string"
+                },
+                "example": "--response-separator\nContent-Type: application/http\n\nHTTP/1.1 200 OK\nContent-Type: application/json\n\n{...}\n--response-separator--"
+              }
+            }
+          },
+          "4XX": {
+            "$ref": "#/components/responses/error"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "basicAuthentication": {
+        "type": "http",
+        "scheme": "basic"
+      }
+    },
+    "schemas": {
+      "API_DEFECT_SRV.A_DefectType": {
+        "type": "object",
+        "properties": {
+          "DefectInternalID": {
+            "type": "string",
+            "maxLength": 12,
+            "title": "Notification",
+            "description": "Notification Number"
+          },
+          "Defect": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 11,
+            "title": "Defect",
+            "description": "Defect Number"
+          },
+          "DefectCategory": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 2,
+            "title": "Defect Category"
+          },
+          "CreatedByUser": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 12,
+            "title": "Created By",
+            "description": "Name of Person Responsible for Creating the Object"
+          },
+          "CreationDate": {
+            "type": "string",
+            "nullable": true,
+            "example": "/Date(1492041600000)/",
+            "title": "Created On",
+            "description": "Date on Which Record Was Created"
+          },
+          "LastChangedByUser": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 12,
+            "title": "Changed By",
+            "description": "Name of Person Who Changed Object"
+          },
+          "LastChangeDate": {
+            "type": "string",
+            "nullable": true,
+            "example": "/Date(1492041600000)/",
+            "title": "Changed On",
+            "description": "Last Changed On"
+          },
+          "DefectText": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 40,
+            "title": "Defect Text"
+          },
+          "DefectCodeCatalog": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 1,
+            "title": "Problems",
+            "description": "Catalog Type - Problems/Defects"
+          },
+          "DefectCodeGroup": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 8,
+            "title": "Defect Code Group"
+          },
+          "DefectCode": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 4,
+            "title": "Defect Code"
+          },
+          "DefectCodeVersion": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 6,
+            "title": "Version",
+            "description": "Version Number"
+          },
+          "DefectObjectCodeCatalog": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 1,
+            "title": "Defect Location Catalog"
+          },
+          "DefectObjectCodeGroup": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 8,
+            "title": "Defect Location Code Group"
+          },
+          "DefectObjectCode": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 4,
+            "title": "Defect Location Code"
+          },
+          "DefectiveQuantity": {
+            "type": "string",
+            "nullable": true,
+            "format": "decimal",
+            "multipleOf": 1.0e-3,
+            "minimum": -9999999999.999,
+            "maximum": 9999999999.999,
+            "example": "0",
+            "title": "Item Quantity",
+            "description": "Defective Quantity for Item (Internal)"
+          },
+          "DefectiveQuantityUnit": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 3,
+            "title": "Unit of Measure",
+            "description": "Unit of Measure for Item"
+          },
+          "ManufacturingOrder": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 12,
+            "title": "Production Order",
+            "description": "Order Number (Production Order)"
+          },
+          "OrderInternalID": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 10,
+            "title": "Plan no. operations",
+            "description": "Plan Number for Operations in Order (Production Order)"
+          },
+          "ManufacturingOrderOperation": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 4,
+            "title": "Operation or Phase",
+            "description": "Operation or Phase Number"
+          },
+          "ManufacturingOrderSequence": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 6,
+            "title": "Sequence"
+          },
+          "CreationTime": {
+            "type": "string",
+            "nullable": true,
+            "example": "PT15H51M04S",
+            "title": "Created At",
+            "description": "System Time of Creation"
+          },
+          "LastChangeTime": {
+            "type": "string",
+            "nullable": true,
+            "example": "PT15H51M04S",
+            "title": "Changed At",
+            "description": "System Time of Change"
+          },
+          "DefectClass": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 2,
+            "title": "Defect Class"
+          },
+          "NumberOfDefects": {
+            "type": "integer",
+            "nullable": true,
+            "format": "int32",
+            "title": "No. of Occurrences",
+            "description": "Number of Defect Occurrences"
+          },
+          "InspPlanOperationInternalID": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 8,
+            "title": "Current Node No.",
+            "description": "Current Node Number from Order Counter"
+          },
+          "InspectionCharacteristic": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 4,
+            "title": "Insp. Characteristic",
+            "description": "Inspection Characteristic Number"
+          },
+          "InspectionSubsetInternalID": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 6,
+            "title": "Sample Number",
+            "description": "Inspection Sample Number"
+          },
+          "MaterialSample": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 12,
+            "title": "Sample",
+            "description": "Material Sample Number"
+          },
+          "WorkCenterTypeCode": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 2,
+            "title": "Object Type",
+            "description": "Object types of the CIM resource"
+          },
+          "MainWorkCenterInternalID": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 8,
+            "title": "Work Center",
+            "description": "Object ID of the Work Center"
+          },
+          "MainWorkCenterPlant": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 4,
+            "title": "Plant for Work Ctr",
+            "description": "Plant for Work Center"
+          },
+          "MainWorkCenter": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 8,
+            "title": "Work Center"
+          },
+          "Equipment": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 18,
+            "title": "Equipment",
+            "description": "Equipment Number"
+          },
+          "FunctionalLocation": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 40,
+            "title": "Functional Location"
+          },
+          "IsDeleted": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 1,
+            "title": "Is Deleted"
+          },
+          "DefectOrigin": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 1,
+            "title": "Origin of item",
+            "description": "Origin of Item Record"
+          },
+          "Material": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 40,
+            "title": "Defective Material"
+          },
+          "Plant": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 4,
+            "title": "Plant"
+          },
+          "InspectionLot": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 12,
+            "title": "Inspection Lot",
+            "description": "Inspection Lot Number"
+          },
+          "CatalogProfile": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 9,
+            "title": "Catalog Profile"
+          },
+          "ChangedDateTime": {
+            "type": "string",
+            "nullable": true,
+            "example": "/Date(1492098664000)/",
+            "title": "Short Time Stamp",
+            "description": "UTC Time Stamp in Short Form (YYYYMMDDhhmmss)"
+          }
+        },
+        "title": "Defects"
+      },
+      "API_DEFECT_SRV.A_DefectType-create": {
+        "type": "object",
+        "properties": {
+          "DefectText": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 40,
+            "title": "Defect Text"
+          },
+          "DefectCodeCatalog": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 1,
+            "title": "Problems",
+            "description": "Catalog Type - Problems/Defects"
+          },
+          "DefectCodeGroup": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 8,
+            "title": "Defect Code Group"
+          },
+          "DefectCode": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 4,
+            "title": "Defect Code"
+          },
+          "DefectCodeVersion": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 6,
+            "title": "Version",
+            "description": "Version Number"
+          },
+          "DefectObjectCodeCatalog": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 1,
+            "title": "Defect Location Catalog"
+          },
+          "DefectObjectCodeGroup": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 8,
+            "title": "Defect Location Code Group"
+          },
+          "DefectObjectCode": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 4,
+            "title": "Defect Location Code"
+          },
+          "DefectiveQuantity": {
+            "type": "string",
+            "nullable": true,
+            "format": "decimal",
+            "multipleOf": 1.0e-3,
+            "minimum": -9999999999.999,
+            "maximum": 9999999999.999,
+            "example": "0",
+            "title": "Item Quantity",
+            "description": "Defective Quantity for Item (Internal)"
+          },
+          "DefectiveQuantityUnit": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 3,
+            "title": "Unit of Measure",
+            "description": "Unit of Measure for Item"
+          },
+          "ManufacturingOrder": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 12,
+            "title": "Production Order",
+            "description": "Order Number (Production Order)"
+          },
+          "ManufacturingOrderOperation": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 4,
+            "title": "Operation or Phase",
+            "description": "Operation or Phase Number"
+          },
+          "ManufacturingOrderSequence": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 6,
+            "title": "Sequence"
+          },
+          "DefectClass": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 2,
+            "title": "Defect Class"
+          },
+          "NumberOfDefects": {
+            "type": "integer",
+            "nullable": true,
+            "format": "int32",
+            "title": "No. of Occurrences",
+            "description": "Number of Defect Occurrences"
+          },
+          "InspPlanOperationInternalID": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 8,
+            "title": "Current Node No.",
+            "description": "Current Node Number from Order Counter"
+          },
+          "InspectionCharacteristic": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 4,
+            "title": "Insp. Characteristic",
+            "description": "Inspection Characteristic Number"
+          },
+          "InspectionSubsetInternalID": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 6,
+            "title": "Sample Number",
+            "description": "Inspection Sample Number"
+          },
+          "MaterialSample": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 12,
+            "title": "Sample",
+            "description": "Material Sample Number"
+          },
+          "WorkCenterTypeCode": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 2,
+            "title": "Object Type",
+            "description": "Object types of the CIM resource"
+          },
+          "MainWorkCenterInternalID": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 8,
+            "title": "Work Center",
+            "description": "Object ID of the Work Center"
+          },
+          "MainWorkCenterPlant": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 4,
+            "title": "Plant for Work Ctr",
+            "description": "Plant for Work Center"
+          },
+          "MainWorkCenter": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 8,
+            "title": "Work Center"
+          },
+          "Equipment": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 18,
+            "title": "Equipment",
+            "description": "Equipment Number"
+          },
+          "FunctionalLocation": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 40,
+            "title": "Functional Location"
+          },
+          "DefectOrigin": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 1,
+            "title": "Origin of item",
+            "description": "Origin of Item Record"
+          },
+          "Material": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 40,
+            "title": "Defective Material"
+          },
+          "Plant": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 4,
+            "title": "Plant"
+          },
+          "InspectionLot": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 12,
+            "title": "Inspection Lot",
+            "description": "Inspection Lot Number"
+          },
+          "CatalogProfile": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 9,
+            "title": "Catalog Profile"
+          }
+        },
+        "title": "Defects (for create)"
+      },
+      "API_DEFECT_SRV.A_DefectType-update": {
+        "type": "object",
+        "properties": {
+          "DefectText": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 40,
+            "title": "Defect Text"
+          },
+          "DefectCodeCatalog": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 1,
+            "title": "Problems",
+            "description": "Catalog Type - Problems/Defects"
+          },
+          "DefectCodeGroup": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 8,
+            "title": "Defect Code Group"
+          },
+          "DefectCode": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 4,
+            "title": "Defect Code"
+          },
+          "DefectCodeVersion": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 6,
+            "title": "Version",
+            "description": "Version Number"
+          },
+          "DefectObjectCodeCatalog": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 1,
+            "title": "Defect Location Catalog"
+          },
+          "DefectObjectCodeGroup": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 8,
+            "title": "Defect Location Code Group"
+          },
+          "DefectObjectCode": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 4,
+            "title": "Defect Location Code"
+          },
+          "DefectiveQuantity": {
+            "type": "string",
+            "nullable": true,
+            "format": "decimal",
+            "multipleOf": 1.0e-3,
+            "minimum": -9999999999.999,
+            "maximum": 9999999999.999,
+            "example": "0",
+            "title": "Item Quantity",
+            "description": "Defective Quantity for Item (Internal)"
+          },
+          "DefectiveQuantityUnit": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 3,
+            "title": "Unit of Measure",
+            "description": "Unit of Measure for Item"
+          },
+          "ManufacturingOrder": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 12,
+            "title": "Production Order",
+            "description": "Order Number (Production Order)"
+          },
+          "ManufacturingOrderOperation": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 4,
+            "title": "Operation or Phase",
+            "description": "Operation or Phase Number"
+          },
+          "ManufacturingOrderSequence": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 6,
+            "title": "Sequence"
+          },
+          "DefectClass": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 2,
+            "title": "Defect Class"
+          },
+          "NumberOfDefects": {
+            "type": "integer",
+            "nullable": true,
+            "format": "int32",
+            "title": "No. of Occurrences",
+            "description": "Number of Defect Occurrences"
+          },
+          "InspPlanOperationInternalID": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 8,
+            "title": "Current Node No.",
+            "description": "Current Node Number from Order Counter"
+          },
+          "InspectionCharacteristic": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 4,
+            "title": "Insp. Characteristic",
+            "description": "Inspection Characteristic Number"
+          },
+          "InspectionSubsetInternalID": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 6,
+            "title": "Sample Number",
+            "description": "Inspection Sample Number"
+          },
+          "MaterialSample": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 12,
+            "title": "Sample",
+            "description": "Material Sample Number"
+          },
+          "WorkCenterTypeCode": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 2,
+            "title": "Object Type",
+            "description": "Object types of the CIM resource"
+          },
+          "MainWorkCenterInternalID": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 8,
+            "title": "Work Center",
+            "description": "Object ID of the Work Center"
+          },
+          "MainWorkCenterPlant": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 4,
+            "title": "Plant for Work Ctr",
+            "description": "Plant for Work Center"
+          },
+          "MainWorkCenter": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 8,
+            "title": "Work Center"
+          },
+          "Equipment": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 18,
+            "title": "Equipment",
+            "description": "Equipment Number"
+          },
+          "FunctionalLocation": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 40,
+            "title": "Functional Location"
+          },
+          "DefectOrigin": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 1,
+            "title": "Origin of item",
+            "description": "Origin of Item Record"
+          },
+          "Material": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 40,
+            "title": "Defective Material"
+          },
+          "Plant": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 4,
+            "title": "Plant"
+          },
+          "InspectionLot": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 12,
+            "title": "Inspection Lot",
+            "description": "Inspection Lot Number"
+          },
+          "CatalogProfile": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 9,
+            "title": "Catalog Profile"
+          }
+        },
+        "title": "Defects (for update)"
+      },
+      "count": {
+        "type": "string",
+        "description": "The number of entities in the collection. Available when using the [$inlinecount](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=67) query option."
+      },
+      "error": {
+        "type": "object",
+        "required": [
+          "error"
+        ],
+        "properties": {
+          "error": {
+            "type": "object",
+            "required": [
+              "code",
+              "message"
+            ],
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "message": {
+                "type": "object",
+                "required": [
+                  "lang",
+                  "value"
+                ],
+                "properties": {
+                  "lang": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              },
+              "innererror": {
+                "type": "object",
+                "description": "The structure of this object is service-specific"
+              }
+            }
+          }
+        }
+      }
+    },
+    "parameters": {
+      "top": {
+        "name": "$top",
+        "in": "query",
+        "description": "Show only the first n items, see [Paging - Top](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=66)",
+        "schema": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "example": 50
+      },
+      "skip": {
+        "name": "$skip",
+        "in": "query",
+        "description": "Skip the first n items, see [Paging - Skip](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=65)",
+        "schema": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "count": {
+        "name": "$inlinecount",
+        "in": "query",
+        "description": "Include count of items, see [Inlinecount](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=67)",
+        "schema": {
+          "type": "string",
+          "enum": [
+            "allpages",
+            "none"
+          ]
+        }
+      }
+    },
+    "responses": {
+      "error": {
+        "description": "Error",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/error"
+            }
+          }
+        }
+      }
+    }
+  }
+}
