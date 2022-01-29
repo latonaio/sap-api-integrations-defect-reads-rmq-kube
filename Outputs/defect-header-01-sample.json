@@ -7,8 +7,8 @@
 			"DefectInternalID": "$00000000004",
 			"Defect": "4",
 			"DefectCategory": "06",
-			"CreationDate": "/Date(1572220800000)/",
-			"LastChangeDate": "/Date(1586217600000)/",
+			"CreationDate": "2019-10-28T09:00:00+09:00",
+			"LastChangeDate": "2020-04-07T09:00:00+09:00",
 			"DefectText": "Incomplete Packing",
 			"DefectCodeCatalog": "9",
 			"DefectCodeGroup": "DEF-PACK",
@@ -43,8 +43,8 @@
 			"Plant": "",
 			"InspectionLot": "0",
 			"CatalogProfile": "",
-			"ChangedDateTime": "/Date(1586238189000+0000)/"
+			"ChangedDateTime": ""
 		}
 	],
-	"time": "2022-01-06T18:41:50.751271+09:00"
+	"time": "2022-01-28T17:49:49+09:00"
 }

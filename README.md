@@ -126,7 +126,7 @@ func (c *SAPAPICaller) AsyncGetDefect(defect, defectText string, accepter []stri
 ```
 
 ## Output  
-本マイクロサービスでは、[golang-logging-library](https://github.com/latonaio/golang-logging-library) により、以下のようなデータがJSON形式で出力されます。  
+本マイクロサービスでは、[golang-logging-library-for-sap](https://github.com/latonaio/golang-logging-library-for-sap) により、以下のようなデータがJSON形式で出力されます。  
 以下の sample.json の例は、SAP 欠陥 の ヘッダ が取得された結果の JSON の例です。  
 以下の項目のうち、"DefectInternalID" ～ "ChangedDateTime" は、/SAP_API_Output_Formatter/type.go 内 の Type Header {} による出力結果です。"cursor" ～ "time"は、golang-logging-library による 定型フォーマットの出力結果です。  
 
@@ -140,8 +140,8 @@ func (c *SAPAPICaller) AsyncGetDefect(defect, defectText string, accepter []stri
 			"DefectInternalID": "$00000000004",
 			"Defect": "4",
 			"DefectCategory": "06",
-			"CreationDate": "/Date(1572220800000)/",
-			"LastChangeDate": "/Date(1586217600000)/",
+			"CreationDate": "2019-10-28T09:00:00+09:00",
+			"LastChangeDate": "2020-04-07T09:00:00+09:00",
 			"DefectText": "Incomplete Packing",
 			"DefectCodeCatalog": "9",
 			"DefectCodeGroup": "DEF-PACK",
@@ -176,9 +176,9 @@ func (c *SAPAPICaller) AsyncGetDefect(defect, defectText string, accepter []stri
 			"Plant": "",
 			"InspectionLot": "0",
 			"CatalogProfile": "",
-			"ChangedDateTime": "/Date(1586238189000+0000)/"
+			"ChangedDateTime": ""
 		}
 	],
-	"time": "2022-01-06T18:41:50.751271+09:00"
+	"time": "2022-01-28T17:49:49+09:00"
 }
 ```

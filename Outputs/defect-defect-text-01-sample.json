@@ -7,8 +7,8 @@
 			"DefectInternalID": "$00000000004",
 			"Defect": "4",
 			"DefectCategory": "06",
-			"CreationDate": "/Date(1572220800000)/",
-			"LastChangeDate": "/Date(1586217600000)/",
+			"CreationDate": "2019-10-28T09:00:00+09:00",
+			"LastChangeDate": "2020-04-07T09:00:00+09:00",
 			"DefectText": "Incomplete Packing",
 			"DefectCodeCatalog": "9",
 			"DefectCodeGroup": "DEF-PACK",
@@ -43,13 +43,13 @@
 			"Plant": "",
 			"InspectionLot": "0",
 			"CatalogProfile": "",
-			"ChangedDateTime": "/Date(1586238189000+0000)/"
+			"ChangedDateTime": ""
 		},
 		{
 			"DefectInternalID": "$00000000057",
 			"Defect": "57",
 			"DefectCategory": "06",
-			"CreationDate": "/Date(1586217600000)/",
+			"CreationDate": "2020-04-07T09:00:00+09:00",
 			"LastChangeDate": "",
 			"DefectText": "Incomplete Packing",
 			"DefectCodeCatalog": "9",
@@ -85,13 +85,13 @@
 			"Plant": "",
 			"InspectionLot": "0",
 			"CatalogProfile": "",
-			"ChangedDateTime": "/Date(1586239602000+0000)/"
+			"ChangedDateTime": ""
 		},
 		{
 			"DefectInternalID": "$00000000079",
 			"Defect": "79",
 			"DefectCategory": "06",
-			"CreationDate": "/Date(1586217600000)/",
+			"CreationDate": "2020-04-07T09:00:00+09:00",
 			"LastChangeDate": "",
 			"DefectText": "Incomplete Packing",
 			"DefectCodeCatalog": "9",
@@ -127,13 +127,13 @@
 			"Plant": "",
 			"InspectionLot": "0",
 			"CatalogProfile": "",
-			"ChangedDateTime": "/Date(1586239602000+0000)/"
+			"ChangedDateTime": ""
 		},
 		{
 			"DefectInternalID": "$00000000101",
 			"Defect": "101",
 			"DefectCategory": "06",
-			"CreationDate": "/Date(1586217600000)/",
+			"CreationDate": "2020-04-07T09:00:00+09:00",
 			"LastChangeDate": "",
 			"DefectText": "Incomplete Packing",
 			"DefectCodeCatalog": "9",
@@ -169,13 +169,13 @@
 			"Plant": "",
 			"InspectionLot": "0",
 			"CatalogProfile": "",
-			"ChangedDateTime": "/Date(1586239602000+0000)/"
+			"ChangedDateTime": ""
 		},
 		{
 			"DefectInternalID": "$00000000123",
 			"Defect": "123",
 			"DefectCategory": "06",
-			"CreationDate": "/Date(1586217600000)/",
+			"CreationDate": "2020-04-07T09:00:00+09:00",
 			"LastChangeDate": "",
 			"DefectText": "Incomplete Packing",
 			"DefectCodeCatalog": "9",
@@ -211,13 +211,13 @@
 			"Plant": "",
 			"InspectionLot": "0",
 			"CatalogProfile": "",
-			"ChangedDateTime": "/Date(1586239602000+0000)/"
+			"ChangedDateTime": ""
 		},
 		{
 			"DefectInternalID": "$00000000145",
 			"Defect": "145",
 			"DefectCategory": "06",
-			"CreationDate": "/Date(1586217600000)/",
+			"CreationDate": "2020-04-07T09:00:00+09:00",
 			"LastChangeDate": "",
 			"DefectText": "Incomplete Packing",
 			"DefectCodeCatalog": "9",
@@ -253,13 +253,13 @@
 			"Plant": "",
 			"InspectionLot": "0",
 			"CatalogProfile": "",
-			"ChangedDateTime": "/Date(1586239602000+0000)/"
+			"ChangedDateTime": ""
 		},
 		{
 			"DefectInternalID": "$00000000167",
 			"Defect": "167",
 			"DefectCategory": "06",
-			"CreationDate": "/Date(1586217600000)/",
+			"CreationDate": "2020-04-07T09:00:00+09:00",
 			"LastChangeDate": "",
 			"DefectText": "Incomplete Packing",
 			"DefectCodeCatalog": "9",
@@ -295,13 +295,13 @@
 			"Plant": "",
 			"InspectionLot": "0",
 			"CatalogProfile": "",
-			"ChangedDateTime": "/Date(1586239602000+0000)/"
+			"ChangedDateTime": ""
 		},
 		{
 			"DefectInternalID": "$00000000189",
 			"Defect": "189",
 			"DefectCategory": "06",
-			"CreationDate": "/Date(1586217600000)/",
+			"CreationDate": "2020-04-07T09:00:00+09:00",
 			"LastChangeDate": "",
 			"DefectText": "Incomplete Packing",
 			"DefectCodeCatalog": "9",
@@ -337,13 +337,13 @@
 			"Plant": "",
 			"InspectionLot": "0",
 			"CatalogProfile": "",
-			"ChangedDateTime": "/Date(1586239602000+0000)/"
+			"ChangedDateTime": ""
 		},
 		{
 			"DefectInternalID": "$00000000211",
 			"Defect": "211",
 			"DefectCategory": "06",
-			"CreationDate": "/Date(1586217600000)/",
+			"CreationDate": "2020-04-07T09:00:00+09:00",
 			"LastChangeDate": "",
 			"DefectText": "Incomplete Packing",
 			"DefectCodeCatalog": "9",
@@ -379,13 +379,13 @@
 			"Plant": "",
 			"InspectionLot": "0",
 			"CatalogProfile": "",
-			"ChangedDateTime": "/Date(1586239602000+0000)/"
+			"ChangedDateTime": ""
 		},
 		{
 			"DefectInternalID": "$00000000233",
 			"Defect": "233",
 			"DefectCategory": "06",
-			"CreationDate": "/Date(1586217600000)/",
+			"CreationDate": "2020-04-07T09:00:00+09:00",
 			"LastChangeDate": "",
 			"DefectText": "Incomplete Packing",
 			"DefectCodeCatalog": "9",
@@ -421,8 +421,8 @@
 			"Plant": "",
 			"InspectionLot": "0",
 			"CatalogProfile": "",
-			"ChangedDateTime": "/Date(1586239602000+0000)/"
+			"ChangedDateTime": ""
 		}
 	],
-	"time": "2022-01-06T18:44:13.517053+09:00"
+	"time": "2022-01-28T17:48:50+09:00"
 }
